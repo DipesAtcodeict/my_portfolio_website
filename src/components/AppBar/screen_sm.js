@@ -21,13 +21,17 @@ const useStyles = makeStyles({
 const AppBarSm = () => {
   const classes = useStyles();
   const aboutRef = useSelector((state) => state.ui.aboutRef);
+  const homeRef = useSelector((state) => state.ui.homeRef);
   const dispatch = useDispatch();
 
   return (
     <div className={classes.appBarSm}>
-      <i className='fas fa-home'></i>
       <i
-        className='fas fa-address-card'
+        className='fas fa-home'
+        onClick={() => dispatch(scrollToRef(homeRef))}
+      ></i>
+      <i
+        className='fas fa-user'
         onClick={() => dispatch(scrollToRef(aboutRef))}
       ></i>
       <i className='fas fa-phone-alt'></i>

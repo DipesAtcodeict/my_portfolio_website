@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import coverImage from './cover.jpg';
 import Typist from 'react-typist';
 import Fade from 'react-reveal';
 import grey from '@material-ui/core/colors/grey';
+import { useDispatch } from 'react-redux';
+import { addHomeRef } from '../../actions/ui';
 
 const useStyles = makeStyles({
   introCover: {
@@ -19,7 +21,7 @@ const useStyles = makeStyles({
   introDesc: {
     width: '70vw',
     position: 'relative',
-    top: '35%',
+    top: '30%',
     left: '17%',
     padding: '10px 5px',
     color: grey[300],
@@ -49,9 +51,15 @@ const useStyles = makeStyles({
 
 const IntroCoverLg = () => {
   const classes = useStyles();
+  const homeRef = useRef();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(addHomeRef(homeRef));
+  }, [dispatch]);
 
   return (
-    <Paper className={classes.introCover}>
+    <Paper className={classes.introCover} ref={homeRef}>
       <div className={classes.introDesc}>
         <div className={classes.desc}>
           <h2 className={classes.hey}>Hey I Am</h2>

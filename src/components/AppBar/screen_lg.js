@@ -20,6 +20,7 @@ const useStyles = makeStyles({
   },
   brand: {
     fontSize: '1.8rem',
+    cursor: 'pointer',
   },
   menuItems: {
     display: 'flex',
@@ -31,12 +32,16 @@ const useStyles = makeStyles({
 const AppBarLg = () => {
   const classes = useStyles();
   const aboutRef = useSelector((state) => state.ui.aboutRef);
+  const homeRef = useSelector((state) => state.ui.homeRef);
   const dispatch = useDispatch();
 
   return (
     <div className={classes.appBar}>
-      <div className={classes.brand}>
-        <a href='/'>DIPESH</a>
+      <div
+        className={classes.brand}
+        onClick={() => dispatch(scrollToRef(homeRef))}
+      >
+        DIPESH
       </div>
       <ul className={classes.menuItems}>
         <li onClick={() => dispatch(scrollToRef(aboutRef))}>About</li>

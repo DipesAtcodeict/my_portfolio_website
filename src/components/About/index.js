@@ -7,7 +7,7 @@ import { addAboutRef } from '../../actions/ui';
 
 const useStyles = makeStyles({
   about: {
-    margin: '2rem 2rem 4rem 2rem',
+    margin: '0 2rem 4rem 2rem',
     fontSize: '1.3rem',
     lineHeight: '1.5rem',
     padding: '15px',
@@ -17,12 +17,37 @@ const useStyles = makeStyles({
   h1: {
     borderBottom: '5px solid tomato',
     display: 'inline-block',
-    padding: '30px',
-    borderRadius: '30px',
+    padding: '25px',
+    borderRadius: '25px',
   },
   p: {
     marginTop: '20px',
     marginBottom: '20px',
+  },
+  icons: {
+    fontSize: '3.5rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    flexWrap: 'wrap',
+  },
+  iconDesc: {
+    fontSize: '1rem',
+    fontWeight: 'medium',
+  },
+  icon: {
+    padding: '1rem',
+  },
+  profileBtn: {
+    display: 'inline-block',
+    backgroundColor: '#b07521',
+    padding: '10px 20px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    borderRadius: '10px',
+    marginBottom: '1rem',
+    marginTop: '1rem',
   },
 });
 
@@ -40,6 +65,24 @@ const About = () => {
       <h1 ref={aboutRef} className={classes.h1}>
         About Me
       </h1>
+      <div className={classes.icons}>
+        <div class={classes.icon}>
+          <i class='fas fa-desktop'></i>
+          <p className={classes.iconDesc}>Web Development</p>
+        </div>
+        <div class={classes.icon}>
+          <i class='fas fa-mobile-alt'></i>
+          <p className={classes.iconDesc}>Mobile Development</p>
+        </div>
+        <div class={classes.icon}>
+          <i class='fab fa-uikit'></i>
+          <p className={classes.iconDesc}>Interactive UI</p>
+        </div>
+        <div class={classes.icon}>
+          <i class='fas fa-user-friends'></i>
+          <p className={classes.iconDesc}>Team Lead</p>
+        </div>
+      </div>
       <Fade left duration={1800}>
         <p className={classes.p}>
           I'm a Full Stack Developer. I can create beautiful, interactive and
@@ -50,6 +93,7 @@ const About = () => {
           and projects.
         </p>
       </Fade>
+      <div className={classes.profileBtn}>Check My Profile</div>
     </div>
   );
 };
