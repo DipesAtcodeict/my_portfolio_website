@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import grey from '@material-ui/core/colors/grey';
+import { useSelector, useDispatch } from 'react-redux';
+import { scrollToRef } from '../../actions/ui';
 
 const useStyles = makeStyles({
   appBar: {
@@ -13,7 +15,8 @@ const useStyles = makeStyles({
     fontSize: '1.4rem',
     display: 'flex',
     justifyContent: 'space-between',
-    opacity: 0.9,
+    opacity: 0.98,
+    zIndex: 1,
   },
   brand: {
     fontSize: '1.8rem',
@@ -27,6 +30,8 @@ const useStyles = makeStyles({
 
 const AppBarLg = () => {
   const classes = useStyles();
+  const aboutRef = useSelector((state) => state.ui.aboutRef);
+  const dispatch = useDispatch();
 
   return (
     <div className={classes.appBar}>
@@ -34,7 +39,7 @@ const AppBarLg = () => {
         <a href='/'>DIPESH</a>
       </div>
       <ul className={classes.menuItems}>
-        <li>About</li>
+        <li onClick={() => dispatch(scrollToRef(aboutRef))}>About</li>
         <li>Contact</li>
         <li>Profile</li>
         <li>Blogs</li>

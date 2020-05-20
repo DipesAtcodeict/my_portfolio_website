@@ -1,5 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { useSelector, useDispatch } from 'react-redux';
+import { scrollToRef } from '../../actions/ui';
 
 const useStyles = makeStyles({
   appBarSm: {
@@ -12,16 +14,22 @@ const useStyles = makeStyles({
     color: 'white',
     display: 'flex',
     justifyContent: 'space-around',
+    zIndex: 1,
   },
 });
 
 const AppBarSm = () => {
   const classes = useStyles();
+  const aboutRef = useSelector((state) => state.ui.aboutRef);
+  const dispatch = useDispatch();
 
   return (
     <div className={classes.appBarSm}>
       <i className='fas fa-home'></i>
-      <i className='fas fa-address-card'></i>
+      <i
+        className='fas fa-address-card'
+        onClick={() => dispatch(scrollToRef(aboutRef))}
+      ></i>
       <i className='fas fa-phone-alt'></i>
       <i className='fas fa-newspaper'></i>
     </div>
