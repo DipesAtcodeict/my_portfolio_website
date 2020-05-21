@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import grey from '@material-ui/core/colors/grey';
-import Fade from 'react-reveal/Fade';
+import { grey } from '@material-ui/core/colors';
+import { Fade } from 'react-reveal';
 import { useDispatch } from 'react-redux';
 import { addAboutRef } from '../../actions/ui';
 
 const useStyles = makeStyles({
   about: {
-    margin: '0 2rem 4rem 2rem',
+    margin: '0 2rem 0 2rem',
     fontSize: '1.3rem',
     lineHeight: '1.5rem',
     padding: '15px',
@@ -46,7 +46,6 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     cursor: 'pointer',
     borderRadius: '10px',
-    marginBottom: '1rem',
     marginTop: '1rem',
   },
 });
@@ -66,20 +65,20 @@ const About = () => {
         About Me
       </h1>
       <div className={classes.icons}>
-        <div class={classes.icon}>
-          <i class='fas fa-desktop'></i>
+        <div className={classes.icon}>
+          <i className='fas fa-desktop'></i>
           <p className={classes.iconDesc}>Web Development</p>
         </div>
-        <div class={classes.icon}>
-          <i class='fas fa-mobile-alt'></i>
+        <div className={classes.icon}>
+          <i className='fas fa-mobile-alt'></i>
           <p className={classes.iconDesc}>Mobile Development</p>
         </div>
-        <div class={classes.icon}>
-          <i class='fab fa-uikit'></i>
+        <div className={classes.icon}>
+          <i className='fab fa-uikit'></i>
           <p className={classes.iconDesc}>Interactive UI</p>
         </div>
-        <div class={classes.icon}>
-          <i class='fas fa-user-friends'></i>
+        <div className={classes.icon}>
+          <i className='fas fa-user-friends'></i>
           <p className={classes.iconDesc}>Team Lead</p>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
+import { Paper } from '@material-ui/core';
 import coverImage from './cover.jpg';
 import Typist from 'react-typist';
-import Flip from 'react-reveal/Flip';
-import Fade from 'react-reveal/Fade';
-import grey from '@material-ui/core/colors/grey';
+import { Flip } from 'react-reveal';
+import { Fade } from 'react-reveal';
+import { grey } from '@material-ui/core/colors';
 import { useDispatch } from 'react-redux';
 import { addHomeRef } from '../../actions/ui';
 
@@ -37,6 +37,7 @@ const useStyles = makeStyles({
     height: '10px',
     backgroundColor: '#e67035',
     borderRadius: '5px',
+    marginTop: '10px',
   },
   job: {
     fontWeight: 'bold',
@@ -79,22 +80,22 @@ const IntroCoverLg = () => {
             <Fade delay={2000}>
               <div className={classes.socialMedia}>
                 <a href='https://github.com/DipesAtcodeict' target='blank'>
-                  <i class='fab fa-github'></i>
+                  <i className='fab fa-github'></i>
                 </a>
                 <a
                   href='https://www.facebook.com/dipesh.chaulagain.9'
                   target='blank'
                 >
-                  <i class='fab fa-facebook'></i>
+                  <i className='fab fa-facebook'></i>
                 </a>
                 <a
                   href='https://www.instagram.com/dipesh_chaulagain'
                   target='blank'
                 >
-                  <i class='fab fa-instagram'></i>
+                  <i className='fab fa-instagram'></i>
                 </a>
                 <a href='https://twitter.com/Dipesh91796265' target='blank'>
-                  <i class='fab fa-twitter'></i>
+                  <i className='fab fa-twitter'></i>
                 </a>
               </div>
             </Fade>

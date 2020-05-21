@@ -1,8 +1,9 @@
 import React from 'react';
+import { grey } from '@material-ui/core/colors';
 import AppBar from './components/AppBar';
 import IntroCover from './components/IntroCover';
 import About from './components/About';
-import grey from '@material-ui/core/colors/grey';
+import Skills from './components/Skills';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <AppBar />
       <IntroCover />
       <About />
+      <Skills />
     </div>
   );
 };
