@@ -42,6 +42,7 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     fontSize: '1.5rem',
     display: 'block',
+    paddingTop: '10px',
   },
   hey: {
     fontFamily: 'Satisfy,cursive',
