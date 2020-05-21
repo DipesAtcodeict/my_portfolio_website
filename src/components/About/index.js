@@ -87,10 +87,11 @@ const About = () => {
         <p className={classes.p}>
           I'm a Full Stack Developer. I can create beautiful, interactive and
           fast user interfaces on Front and backend solutions for your business
-          requirements.I can also create crsoss platform native mobile apps.I am
-          an undergrad studying computer science in Nepal. I have worked on
+          requirements. I can also create cross platform native mobile apps. I
+          am an undergrad studying computer science in Nepal. I have worked on
           various projects individually and some in team in various competition
-          and projects.
+          and projects. I am capable of working in team and changing concepts
+          into working applications.
         </p>
       </Fade>
       <div className={classes.profileBtn}>Check My Profile</div>

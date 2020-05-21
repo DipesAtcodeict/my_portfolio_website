@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   introDesc: {
     width: '70vw',
     position: 'relative',
-    top: '30%',
+    top: '22%',
     left: '17%',
     padding: '10px 5px',
     color: grey[300],
@@ -43,9 +43,16 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     fontSize: '1.5rem',
     display: 'block',
+    paddingTop: '10px',
   },
   hey: {
     fontFamily: 'Satisfy,cursive',
+  },
+  socialMedia: {
+    margin: '15px',
+    display: 'flex',
+    justifyContent: 'center',
+    fontSize: '2.5rem',
   },
 });
 
@@ -70,6 +77,28 @@ const IntroCoverLg = () => {
               <Typist.Delay ms={2000} />
               Full Stack Developer
             </Typist>
+          </Fade>
+          <Fade delay={2000}>
+            <div className={classes.socialMedia}>
+              <a href='https://github.com/DipesAtcodeict' target='blank'>
+                <i class='fab fa-github'></i>
+              </a>
+              <a
+                href='https://www.facebook.com/dipesh.chaulagain.9'
+                target='blank'
+              >
+                <i class='fab fa-facebook'></i>
+              </a>
+              <a
+                href='https://www.instagram.com/dipesh_chaulagain'
+                target='blank'
+              >
+                <i class='fab fa-instagram'></i>
+              </a>
+              <a href='https://twitter.com/Dipesh91796265' target='blank'>
+                <i class='fab fa-twitter'></i>
+              </a>
+            </div>
           </Fade>
         </div>
       </div>
