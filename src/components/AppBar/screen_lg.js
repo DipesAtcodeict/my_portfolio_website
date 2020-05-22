@@ -33,6 +33,7 @@ const AppBarLg = () => {
   const classes = useStyles();
   const aboutRef = useSelector((state) => state.ui.aboutRef);
   const homeRef = useSelector((state) => state.ui.homeRef);
+  const profileRef = useSelector((state) => state.ui.profileRef);
   const dispatch = useDispatch();
 
   return (
@@ -45,8 +46,8 @@ const AppBarLg = () => {
       </div>
       <ul className={classes.menuItems}>
         <li onClick={() => dispatch(scrollToRef(aboutRef))}>About</li>
+        <li onClick={() => dispatch(scrollToRef(profileRef))}>Profile</li>
         <li>Contact</li>
-        <li>Profile</li>
         <li>Blogs</li>
       </ul>
     </div>

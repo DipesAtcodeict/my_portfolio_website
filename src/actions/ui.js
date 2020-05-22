@@ -1,4 +1,9 @@
-import { SCROLLTO_REF, ADD_ABOUT_REF, ADD_HOME_REF } from './types';
+import {
+  SCROLLTO_REF,
+  ADD_ABOUT_REF,
+  ADD_HOME_REF,
+  ADD_PROFILE_REF,
+} from './types';
 
 export function scrollToRef(ref) {
   return {
@@ -17,6 +22,13 @@ export function addAboutRef(ref) {
 export function addHomeRef(ref) {
   return {
     type: ADD_HOME_REF,
+    payload: ref,
+  };
+}
+
+export function addProfileRef(ref) {
+  return {
+    type: ADD_PROFILE_REF,
     payload: ref,
   };
 }

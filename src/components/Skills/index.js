@@ -10,7 +10,6 @@ const useStyles = makeStyles({
     lineHeight: '1.5rem',
     textAlign: 'center',
     color: grey[300],
-    marginBottom: '4rem',
     padding: '15px',
   },
   h1: {

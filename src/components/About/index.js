@@ -2,14 +2,24 @@ import React, { useEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
 import { Fade } from 'react-reveal';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { addAboutRef } from '../../actions/ui';
+import { scrollToRef } from '../../actions/ui';
+import useWindowSize from '../../hooks/useWindowSize';
 
 const useStyles = makeStyles({
   about: {
-    margin: '0 2rem 0 2rem',
-    fontSize: '1.3rem',
-    lineHeight: '1.5rem',
+    margin: '0 5rem 0 5rem',
+    fontSize: '1.5rem',
+    lineHeight: '150%',
+    padding: '15px',
+    textAlign: 'center',
+    color: grey[300],
+  },
+  aboutSm: {
+    margin: '0 1rem 0 1rem',
+    fontSize: '1.5rem',
+    lineHeight: '150%',
     padding: '15px',
     textAlign: 'center',
     color: grey[300],
@@ -18,6 +28,7 @@ const useStyles = makeStyles({
     borderBottom: '5px solid tomato',
     display: 'inline-block',
     padding: '25px',
+    lineHeight: '120%',
     borderRadius: '25px',
   },
   p: {
@@ -54,13 +65,15 @@ const About = () => {
   const classes = useStyles();
   const aboutRef = useRef();
   const dispatch = useDispatch();
+  const profileRef = useSelector((state) => state.ui.profileRef);
+  const [width] = useWindowSize();
 
   useEffect(() => {
     dispatch(addAboutRef(aboutRef));
   }, [dispatch]);
 
   return (
-    <div className={classes.about}>
+    <div className={width > 700 ? classes.about : classes.aboutSm}>
       <h1 ref={aboutRef} className={classes.h1}>
         About Me
       </h1>
@@ -89,11 +102,16 @@ const About = () => {
           requirements. I can also create cross platform native mobile apps. I
           am an undergrad studying computer science in Nepal. I have worked on
           various projects individually and some in team in various competition
-          and projects. I am capable of working in team and changing concepts
-          into working applications.
+          and projects. I am capable of working in team and changing ideas into
+          working applications.
         </p>
       </Fade>
-      <div className={classes.profileBtn}>Check My Profile</div>
+      <div
+        onClick={() => dispatch(scrollToRef(profileRef))}
+        className={classes.profileBtn}
+      >
+        Check My Profile
+      </div>
     </div>
   );
 };

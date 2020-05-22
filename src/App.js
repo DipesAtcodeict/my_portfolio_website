@@ -4,6 +4,8 @@ import AppBar from './components/AppBar';
 import IntroCover from './components/IntroCover';
 import About from './components/About';
 import Skills from './components/Skills';
+import Profile from './components/Profile';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <IntroCover />
       <About />
       <Skills />
+      <Profile />
+      <Footer />
     </div>
   );
 };
