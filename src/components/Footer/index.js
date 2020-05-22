@@ -32,7 +32,7 @@ const Footer = () => {
         </Tada>
         <span>using ReactJS, Material UI and FontAwesome</span>
         <span>
-          <i class='fas fa-copyright'></i>
+          <i className='fas fa-copyright'></i>
         </span>
         <span>Dipesh Chaulagain - {date.getFullYear()}</span>
       </h3>

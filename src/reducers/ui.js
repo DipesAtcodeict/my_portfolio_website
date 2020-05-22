@@ -3,6 +3,7 @@ import {
   ADD_ABOUT_REF,
   ADD_HOME_REF,
   ADD_PROFILE_REF,
+  ADD_CONTACT_REF,
 } from '../actions/types';
 
 export default function (state = {}, action) {
@@ -22,6 +23,9 @@ export default function (state = {}, action) {
 
     case ADD_PROFILE_REF:
       return { ...state, profileRef: action.payload };
+
+    case ADD_CONTACT_REF:
+      return { ...state, contactRef: action.payload };
 
     default:
       return { ...state };

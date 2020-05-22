@@ -5,7 +5,6 @@ import { grey } from '@material-ui/core/colors';
 import { addProfileRef } from '../../actions/ui';
 import { Grid, CardMedia } from '@material-ui/core';
 import profile from './profile.JPG';
-import cv from './dipesh_cv_final.pdf';
 import { Fade } from 'react-reveal';
 
 const useStyles = makeStyles({
@@ -92,7 +91,11 @@ const Profile = () => {
               <p>Mount View English Boarding School</p>
             </div>
 
-            <a className={classes.cvBtn} href={cv} target='blank'>
+            <a
+              className={classes.cvBtn}
+              href='https://drive.google.com/open?id=1O-0JQ-Waf3Nq_d_-tXtcrMnzOZMqJAsM'
+              target='blank'
+            >
               Download CV
             </a>
           </Fade>

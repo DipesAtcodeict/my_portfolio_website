@@ -3,6 +3,7 @@ import {
   ADD_ABOUT_REF,
   ADD_HOME_REF,
   ADD_PROFILE_REF,
+  ADD_CONTACT_REF,
 } from './types';
 
 export function scrollToRef(ref) {
@@ -29,6 +30,13 @@ export function addHomeRef(ref) {
 export function addProfileRef(ref) {
   return {
     type: ADD_PROFILE_REF,
+    payload: ref,
+  };
+}
+
+export function addContactRef(ref) {
+  return {
+    type: ADD_CONTACT_REF,
     payload: ref,
   };
 }
