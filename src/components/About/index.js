@@ -78,22 +78,24 @@ const About = () => {
         About Me
       </h1>
       <div className={classes.icons}>
-        <div className={classes.icon}>
-          <i className='fas fa-desktop'></i>
-          <p className={classes.iconDesc}>Web Development</p>
-        </div>
-        <div className={classes.icon}>
-          <i className='fas fa-mobile-alt'></i>
-          <p className={classes.iconDesc}>Mobile Development</p>
-        </div>
-        <div className={classes.icon}>
-          <i className='fab fa-uikit'></i>
-          <p className={classes.iconDesc}>Interactive UI</p>
-        </div>
-        <div className={classes.icon}>
-          <i className='fas fa-user-friends'></i>
-          <p className={classes.iconDesc}>Team Lead</p>
-        </div>
+        <Fade bottom>
+          <div className={classes.icon}>
+            <i className='fas fa-desktop'></i>
+            <p className={classes.iconDesc}>Web Development</p>
+          </div>
+          <div className={classes.icon}>
+            <i className='fas fa-mobile-alt'></i>
+            <p className={classes.iconDesc}>Mobile Development</p>
+          </div>
+          <div className={classes.icon}>
+            <i className='fab fa-uikit'></i>
+            <p className={classes.iconDesc}>Interactive UI</p>
+          </div>
+          <div className={classes.icon}>
+            <i className='fas fa-user-friends'></i>
+            <p className={classes.iconDesc}>Team Lead</p>
+          </div>
+        </Fade>
       </div>
       <Fade left duration={1800}>
         <p className={classes.p}>
