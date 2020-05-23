@@ -1,0 +1,45 @@
+.moon {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background: url('./moon.jpg');
+    background-repeat: repeat-x;
+    background-size: cover;
+    animation: moon-rotation 90s linear infinite;
+    box-shadow: inset 60px 0 40px black,
+        inset 160px 0 60px rgba(0, 0, 0, .9),
+        inset -160px 0 60px rgba(248, 248, 213, 0.2);
+}
+
+.moon:before {
+    content: "";
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 495px;
+    height: 495px;
+    box-shadow: -60px 0 50px black;
+}
+
+@keyframes moon-rotation {
+    from {
+        background-position: -500px center;
+    }
+
+    to {
+        background-position: 496px center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .moon {
+        width: 250px;
+        height: 250px;
+    }
+
+    .moon:before {
+        width: 245px;
+        height: 245px;
+        box-shadow: -60px 0 50px black;
+    }
+}
